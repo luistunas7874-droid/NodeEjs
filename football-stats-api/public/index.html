@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>⚽ Football Stats</h1>
+        <p>Consulta y administra estadísticas de equipos de fútbol</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Equipos</h2>
+            <button onclick="cargarEquipos()">Ver equipos</button>
+            <div id="listaEquipos"></div>
+        </section>
+
+        <section>
+            <h2>Buscar equipo</h2>
+
+            <input type="text" id="nombreBuscar" placeholder="Ejemplo: Chivas">
+
+            <button onclick="buscarEquipo()">Buscar</button>
+
+            <div id="resultadoBusqueda"></div>
+        </section>
+
+        <section>
+            <h2>Comparar equipos</h2>
+
+            <input type="number" id="idEquipo1" placeholder="ID equipo 1">
+            <input type="number" id="idEquipo2" placeholder="ID equipo 2">
+
+            <button onclick="compararEquipos()">Comparar</button>
+
+            <div id="resultadoComparacion"></div>
+        </section>
+
+        <section>
+            <h2>Agregar equipo</h2>
+
+            <input type="text" id="nuevoNombre" placeholder="Nombre">
+            <input type="text" id="nuevoPais" placeholder="País">
+            <input type="text" id="nuevaLiga" placeholder="Liga">
+            <input type="number" id="nuevosTitulos" placeholder="Títulos">
+
+            <button onclick="agregarEquipo()">Agregar equipo</button>
+
+            <div id="resultadoAgregar"></div>
+        </section>
+
+        <section>
+            <h2>Eliminar equipo</h2>
+
+            <input type="number" id="idEliminar" placeholder="ID del equipo">
+
+            <button onclick="eliminarEquipo()">Eliminar equipo</button>
+
+            <div id="resultadoEliminar"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Football Stats API - Proyecto Node.js</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
